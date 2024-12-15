@@ -1,0 +1,75 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Player</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<script src="./main.js" defer></script>
+
+<div class="player">
+  <!-- Dashboard -->
+  <div class="dashboard">
+    <!-- Header -->
+    <header>
+      <h4>Tên bài hát:</h4>
+      <h2>String 57th & 9th</h2>
+    </header>
+
+    <!-- CD -->
+    <div class="cd">
+      <div class="cd-thumb"></div>
+    </div>
+
+    <!-- Time and Control -->
+    <div class="time">
+      <span id="current-time">00:00</span>
+      <span id="total-time">00:00</span>
+    </div>
+    <div class="control">
+      <div class="btn btn-repeat">
+        <i class="fas fa-redo"></i>
+      </div>
+      <div class="btn btn-prev">
+        <i class="fas fa-step-backward"></i>
+      </div>
+      <div class="btn btn-toggle-play" id="play-pause-btn">
+        <i class="fas fa-play"></i>  
+      </div>
+      <div class="btn btn-next">
+        <i class="fas fa-step-forward"></i>
+      </div>
+      <div class="btn btn-random">
+        <i class="fas fa-random"></i>
+      </div>
+
+    </div>
+    <div class="control">
+      <div class="btn btn-speed">
+        <i class="fas fa-tachometer-alt"></i> 
+      </div>
+      <div class="speed-options">
+        <button class="speed-option" data-speed="0.5">0.5x</button>
+        <button class="speed-option" data-speed="1">1x</button>
+        <button class="speed-option" data-speed="1.5">1.5x</button>
+        <button class="speed-option" data-speed="2">2x</button>
+      </div>
+    </div>
+    
+    <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+    <div class="control">
+      <div class="btn btn-volume" id="volume-toggle">
+          <i class="fas fa-volume-up"></i> <!-- Biểu tượng tắt âm thanh -->
+      </div>
+      <div class="volume-container">
+          <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+      </div>
+  </div>
+    <audio id="audio" src=""></audio>
+  </div>
+
+  <!-- Playlist -->
+  <div class="playlist"></div>
+  <footer>
+    <p>&copy; 2024 Trình phát nhạc - PhamVanPhuoc</p>
+  </footer>
+</div>
